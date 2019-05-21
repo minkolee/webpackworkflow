@@ -8,5 +8,4 @@ var start = 0;
 
 setInterval(function () {
     div.style.setProperty("transform", "rotate(" + (++start) + "deg)");
-
 }, 30);
