@@ -23,12 +23,20 @@ module.exports = {
                     {
                         loader: ExtractPlugin.loader,
                     },
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    }
                 ]
             },
 
             {
-                test: /\.m?js$/,
+                test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
@@ -40,7 +48,7 @@ module.exports = {
         ]
     },
 
-    //插件部分
+    // 插件部分
     plugins: [
         new ExtractPlugin({
             filename: "[name].css"

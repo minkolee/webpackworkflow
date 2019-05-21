@@ -1,4 +1,17 @@
+@import "variable.css";
+
 #app {
     text-align: center;
     color: brown;
+    background-color: $mainBlack;
+    max-width: calc(4*$standardwidth);
+    margin-right: auto;
+    margin-left: auto;
+    transform: rotate(30deg);
+    margin-top: 40%;
+
+    p {
+        font-size: 2rem;
+        color: $mainColor;
+    }
 }
