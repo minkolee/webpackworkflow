@@ -6,6 +6,10 @@ var div = document.getElementById("app");
 
 var start = 0;
 
-setInterval(function () {
-    div.style.setProperty("transform", "rotate(" + (++start) + "deg)");
+var turn = setInterval(function () {
+    if (start === 360) {
+        clearInterval(turn);
+    }
+    div.style.setProperty("transform", "rotate(" + (start) + "deg)");
+    start++;
 }, 30);

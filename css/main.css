@@ -7,7 +7,6 @@
     max-width: calc(4*$standardwidth);
     margin-right: auto;
     margin-left: auto;
-    transform: rotate(30deg);
     margin-top: 40%;
 
     p {
